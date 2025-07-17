@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        header {
+            background: #343a40;
+            color: #fff;
+            width: 100%;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        main {
+            margin-top: 2rem;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            margin: 0 0 1rem 0;
+        }
+        ul {
+            padding-left: 1.2rem;
+        }
+        code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Todo List API</h1>
+        <p>Bienvenido a la API de gestión de tareas</p>
+    </header>
+    <main>
+        <h2>Endpoints principales</h2>
+        <ul>
+            <li><code>GET /api/todos</code> - Listar todas las tareas</li>
+            <li><code>POST /api/todos</code> - Crear una nueva tarea</li>
+            <li><code>GET /api/todos/:id</code> - Obtener una tarea por ID</li>
+            <li><code>PUT /api/todos/:id</code> - Actualizar una tarea</li>
+            <li><code>DELETE /api/todos/:id</code> - Eliminar una tarea</li>
+        </ul>
+        <p>Consulta la documentación para más detalles sobre cómo usar la API.</p>
+    </main>
+</body>
+</html>
