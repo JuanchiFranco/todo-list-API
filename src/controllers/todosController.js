@@ -8,9 +8,7 @@ async function getTodos(req, res) {
         const userId = req.user.id; // Get the authenticated user ID
         const todos = await getAllTodos(userId, page, limit);
 
-        if (!todos.success) return res.status(500).json({ error: todos.message });
-
-        return res.json({ todos: todos.todos, page, limit, total: todos.todos.total });
+        return res.json({ todos: todos.todos, page, limit, total: todos.total });
     } catch (error) {
         console.error('Error buscando todos:', error);
         return res.status(500).json({ error: 'Error interno del servidor' });

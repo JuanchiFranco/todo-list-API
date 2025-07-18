@@ -10,8 +10,13 @@ async function getAllTodos(userId, page = 1, limit = 10) {
         });
 
         const totalTodos = await prisma.todo.count({ where: { userId } });
-        todos.total = totalTodos;
-        return { success: true, todos };
+        
+        const data = {
+            success: true,
+            todos: todos,
+            total: totalTodos
+        };
+        return data;
     } catch (error) {
         console.error('Error buscando todos:', error);
         throw new Error('Error buscando todos');
