@@ -1,4 +1,4 @@
-import prisma from '../config/db.js';
+import { prisma } from '../config/db.js';
 
 async function getAllTodos(userId, page = 1, limit = 10) {
     try {
@@ -32,8 +32,6 @@ async function create(userId, title, description) {
                 description
             }
         });
-
-        if (!newTodo) return { success: false, message: 'Error al crear el todo' };
 
         return { success: true, todo: newTodo };
     } catch (error) {

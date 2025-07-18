@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import accessTokenMiddleware from '../middlewares/accesTokenMiddleware.js';
+import { accessTokenMiddleware } from '../middlewares/accesTokenMiddleware.js';
 import { getTodos, createTodo, deleteTodo, updateTodo } from '../controllers/todosController.js';
 
 const router = Router();
